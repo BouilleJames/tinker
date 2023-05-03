@@ -1,0 +1,325 @@
+/* je supprime les marges intérieurs et exterieurs à la page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* j'importe mon image de fond en background */
+header {
+    background: url("image/banner_bg.jpg");
+    min-height: 635px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+/* j'enleve le soulignement des liens */
+a {
+    text-decoration: none;
+}
+/* je place ma classe navbar dans une boite  */
+.navbar 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+/* couleur du logo bis */
+.logo a{
+    color: #fafafa;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 800;
+    font-family: sans-serif;
+}
+/* je change la couleur 1ere lettre du logo */
+.logo a span
+{
+    color: #f6c45c;
+    font-size: 1.6em;
+}
+.desktop a
+{
+    color: #fafafa;
+    text-transform: uppercase;
+}
+.desktop ul li
+{
+    display: inline-block;
+    margin-left: 20px;
+}
+.boxHeader
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fafafa;
+    min-width: 280px;
+    max-width: 670px;
+    text-align: center;
+    line-height: 2em;
+    height: 600px;
+}
+.boxHeader h1
+{
+    font-size: 1.5em;
+}
+.boxHeader button
+{
+    border-radius: 25px;
+    width: 80px;
+    height: 40px;
+}
+h1 span:nth-child(1)
+{
+    color: #3dc1cd;
+}
+h1 span:last-child
+{
+    color: #f69536;
+}
+.mobile
+{
+    display: none;
+}
+@media  screen and (max-width: 600px){
+    .mobile
+    {
+        display: block;
+        position: relative;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile .burgerbtn {
+        background: #fafafa;
+        height: 30px;
+        width: 30px;
+        border-radius: 5px;
+        display: grid;
+        place-items: center;
+        position: fixed;
+        top: 15px;
+        z-index: 999;
+    }
+    .mobile .menuburger{
+        background: rgba(0, 0, 0, 0.5);
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+    }
+
+    .mobile div{
+        background: rgba(255, 255, 255, 0.25);
+        height: 30px;
+        width: 30px;
+        border-radius: 5px;
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 0;
+    }
+    .mobile div:first-child{
+        background: rgba(255, 255, 255, 0.5);
+        height: 30px;
+        width: 30px;
+        border-radius: 5px;
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 0;
+    }
+    .mobile div:last-child{
+        background: rgba(0, 0, 0, 0.5);
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+    }
+    .mobile div i{
+        font-size: 1.5em;
+    }
+    .mobile input{
+        appearance: none;
+    }
+    .mobile input:checked ~ .menuburger{
+        height: 100vh;
+    }
+}
+p
+{
+    font-size: 16px;
+    color: #fafafa;
+}
+
+/* j'enleve les puces des listes */
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.headerDown
+{
+    background: url("image/about_bg.jpg");
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+}
+.headerDown p
+{
+    text-align: center;
+}
+.ring button
+{
+    background-color: #3dc1cd;
+    border-radius: 25px;
+    height: 40px;
+    width: 170px;
+    color: #fafafa;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.heart button
+{
+    background-color: #3dc1cd;
+    border-radius: 25px;
+    height: 40px;
+    width: 170px;
+    color: #fafafa;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.clock button
+{
+    background-color: #3dc1cd;
+    border-radius: 25px;
+    height: 40px;
+    width: 170px;
+    color: #fafafa;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.setting button
+{
+    background-color: #3dc1cd;
+    border-radius: 25px;
+    height: 40px;
+    width: 170px;
+    color: #fafafa;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logoJaune
+{
+    background: #f6c45c;
+    border-radius:50%;
+    border: 3px solid #fafafa;
+    width:100px;
+    height:100px;
+    padding: 30px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoJaune img
+{
+    width: 60px;
+}
+
+hr
+{
+    width: 200px;
+}
+
+.ring
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.heart
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.clock
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.setting
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* ------------------------------ */
+
+/* Main */
+main
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+h3
+{
+    color: #fafafa;
+}
+.asideblue
+{
+    background-color: #3dc1cd;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    float: left;
+}
+.gallery
+{
+    float: right;
+    display: flex;
+    
+}
+.asideblue hr
+{
+    width: 300px;
+}
+.asideblue ul
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/*#f69536 #3dc1cd*/
